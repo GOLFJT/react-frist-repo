@@ -1,4 +1,4 @@
-import styled , { ThemeProvider } from 'styled-components'
+import styled  from 'styled-components'
 
 export const Section = styled.section`
     background: ${props =>props.theme.main};
@@ -73,13 +73,16 @@ export const FormBox = styled.div`
         `}
         ${props => props.listPost && `
             padding:20px;
-            border-top: 1px solid #848484
+            border-top: 1px solid #848484;
+            > span {
+                line-height:40px;
+                color:#fff;
+                padding: 0 10px;
+                flex-grow: 1;
+            }          
+            &:last-child{
+                background: palevioletred;
+            } 
         `}
 `;
 
-export const TextPost = styled.span`
-    line-height:40px;
-    color:#fff;
-    padding: 0 10px;
-    flex-grow: 1;
-`

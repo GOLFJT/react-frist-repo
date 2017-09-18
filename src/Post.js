@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { 
  FormBox,
- Button,
- TextPost
+ Button
 } from './MainStyle'
 
 class Post extends Component {
@@ -13,7 +12,7 @@ class Post extends Component {
       <FormBox horizontal>
         {postItems.map((post, key) => (
             <FormBox listPost key={key+1}>
-               <TextPost>{key+1}. {post}</TextPost>
+               <span>{key+1}. {post}</span>
                <Button delete onClick={() => this.props.deleteItem(key)}>ลบ</Button>
             </FormBox>
         ))}
