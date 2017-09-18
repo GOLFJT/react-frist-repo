@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component app renders correctly app 1`] = `
+<section
+  className="sc-bdVaJa eGpIyZ"
+>
+  <div
+    className="sc-EHOje bKnmLa"
+  >
+    <form
+      className="sc-ifAKCX gFrwBC"
+      id="form-submit"
+      onSubmit={[Function]}
+    >
+      <div
+        className="sc-EHOje bKnmLa"
+      >
+        <textarea
+          className="ta-style sc-htpNat chcmYK"
+          id="inputText"
+          name="main_input"
+          rows="4"
+        />
+        <input
+          className="sc-bwzfXH dXeYBf"
+          name="password"
+          type="password"
+        />
+      </div>
+      <div
+        className="sc-EHOje bKnmLa"
+      >
+        <button
+          className="sc-bxivhb gyXcSL"
+          size={
+            Object {
+              "fontSize": "1.5em;",
+            }
+          }
+          type="submit"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+  <div
+    className="sc-EHOje hkTeaZ"
+  />
+</section>
+`;

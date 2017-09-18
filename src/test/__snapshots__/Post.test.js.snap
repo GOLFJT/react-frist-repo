@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-EHOje hkTeaZ"
+>
+  <div
+    className="sc-EHOje ghyTZr"
+  >
+    <span>
+      1
+      . 
+      prop
+    </span>
+    <button
+      className="sc-bxivhb gnZhbm"
+      onClick={[Function]}
+    >
+      ลบ
+    </button>
+  </div>
+</div>
+`;
