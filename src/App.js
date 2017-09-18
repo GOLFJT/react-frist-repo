@@ -1,7 +1,17 @@
 import React, { Component } from 'react'
-import './App.css'
 import Post from './Post.js'
 import { getApiSum } from './GetApi'
+import { ThemeProvider } from 'styled-components'
+import { 
+  Section,
+  darkTheme,
+  lightTheme,
+  InputTypePassword,
+  Textarea,
+  Button,
+  Form,
+  FormBox
+} from './MainStyle'
 
 class App extends Component {
 
@@ -41,27 +51,29 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <div className="flex-box">
-          <form id="form-submit" onSubmit={(e) => {     
-                  e.preventDefault() 
-                  this.click(e)
-                } 
-            }>
-            <div className="col-flex">
-                <textarea rows="4" name="main_input" className="ta-style" id="inputText"></textarea>
-                <input name="text" type="text"/>
-            </div>
-            <div className="col-flex">
-                <button type="submit">Submit</button>
-            </div>
-          </form >
-        </div>
-        <Post 
-          postItems={this.state.valTextarea} 
-          deleteItem={ this.deleteItem }
-        />
-      </div>  
+      <ThemeProvider theme={darkTheme}>
+        <Section>
+          <FormBox>
+            <Form id="form-submit" onSubmit={(e) => {     
+                    e.preventDefault() 
+                    this.click(e)
+                  } 
+              }>
+              <FormBox>
+                  <Textarea rows="4" name="main_input" className="ta-style" id="inputText"></Textarea>
+                  <InputTypePassword name="password"/>
+              </FormBox>
+              <FormBox>
+                  <Button primary type="submit">Submit</Button>
+              </FormBox>
+            </Form >
+          </FormBox>
+          <Post 
+            postItems={this.state.valTextarea} 
+            deleteItem={ this.deleteItem }
+          />
+        </Section>  
+      </ThemeProvider>
     )
   }
 }

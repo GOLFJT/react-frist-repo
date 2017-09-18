@@ -1,18 +1,23 @@
 import React, { Component } from 'react'
+import { 
+ FormBox,
+ Button,
+ TextPost
+} from './MainStyle'
 
 class Post extends Component {
 
   render() {
     let postItems = this.props.postItems
     return (
-      <div className="flex-box horizontal-flex">
+      <FormBox horizontal>
         {postItems.map((post, key) => (
-          <div key={key+1}> 
-            <div className="col-flex"><p>{key+1}. {post}</p></div>
-            <button onClick={() => this.props.deleteItem(key)}>ลบf</button>
-          </div>
+            <FormBox listPost key={key+1}>
+               <TextPost>{key+1}. {post}</TextPost>
+               <Button delete onClick={() => this.props.deleteItem(key)}>ลบ</Button>
+            </FormBox>
         ))}
-      </div>
+      </FormBox>
     )
   }
 }
